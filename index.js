@@ -6,7 +6,7 @@ const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
 const {mailRoutes} = require('./routes')
 
-const PORT = process.env.port || 8000
+const APP_PORT = process.env.PORT || 8000
 const app = new koa()
 app.use(cors({
   origin: "*",
@@ -29,4 +29,4 @@ app.on('error', err => {
   console.log(err);
 });
 
-app.listen(PORT)
+app.listen(APP_PORT)
