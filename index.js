@@ -1,4 +1,6 @@
-require('dotenv').config()
+if(process.env.NODE_ENV !=="production"){
+  require('dotenv').config()
+}
 const koa = require('koa')
 const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
